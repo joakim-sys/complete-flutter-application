@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "194766899852",
+    "project_id": "light-60803",
+    "storage_bucket": "light-60803.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194766899852:android:5585b6000321658026c9a9",
+        "android_client_info": {
+          "package_name": "com.example.light"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194766899852-tfaqq3h03bvvhq60hv70boub9c2o279g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHcobyOXVOgjNAZoIUOC_TuNvnEoJxNmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194766899852-tfaqq3h03bvvhq60hv70boub9c2o279g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "194766899852-3n24bghhkt9aceofdbbfafr0g0ui0c9p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.light.news"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194766899852:android:d83a245c8d9389b926c9a9",
+        "android_client_info": {
+          "package_name": "com.example.pro_one"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194766899852-tfaqq3h03bvvhq60hv70boub9c2o279g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHcobyOXVOgjNAZoIUOC_TuNvnEoJxNmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194766899852-tfaqq3h03bvvhq60hv70boub9c2o279g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "194766899852-3n24bghhkt9aceofdbbfafr0g0ui0c9p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.light.news"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194766899852:android:5e207fad8769297126c9a9",
+        "android_client_info": {
+          "package_name": "com.light.news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194766899852-tfaqq3h03bvvhq60hv70boub9c2o279g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHcobyOXVOgjNAZoIUOC_TuNvnEoJxNmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194766899852-tfaqq3h03bvvhq60hv70boub9c2o279g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "194766899852-3n24bghhkt9aceofdbbfafr0g0ui0c9p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.light.news"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
