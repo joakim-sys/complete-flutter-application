@@ -16,11 +16,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'firebase_options.dart';
 
 typedef AppBuilder = Future<Widget> Function(
-  FirebaseDynamicLinks firebaseDynamicLinks,
-  FirebaseMessaging firebaseMessaging,
-  SharedPreferences sharedPreferences,
-  AnalyticsRepository analyticsRepository,
-);
+    FirebaseDynamicLinks firebaseDynamicLinks,
+    FirebaseMessaging firebaseMessaging,
+    SharedPreferences sharedPreferences,
+    AnalyticsRepository analyticsRepository);
 
 Future<void> bootstrap(AppBuilder builder) async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,12 +40,8 @@ Future<void> bootstrap(AppBuilder builder) async {
   await runZonedGuarded(
     () async {
       unawaited(MobileAds.instance.initialize());
-      runApp(await builder(
-        FirebaseDynamicLinks.instance,
-        FirebaseMessaging.instance,
-        sharedPreferences,
-        analyticsRepository,
-      ));
+      runApp(await builder(FirebaseDynamicLinks.instance,
+          FirebaseMessaging.instance, sharedPreferences, analyticsRepository));
     },
     FirebaseCrashlytics.instance.recordError,
   );

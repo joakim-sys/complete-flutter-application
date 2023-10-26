@@ -44,5 +44,8 @@
   "subscriptionPurchaseCompleted": "Purchase completed!",
   "networkError": "A network error has occured.\nCheck your connection and try again.",
   "networkErrorButton": "Try Again",
-  "newsBlockPremiumText": "Premium"
+  "newsBlockPremiumText": "Premium",
+  "subscribeErrorMessage": "Problem ocurred when subscribing to the newsletter",
+  "subscribeSuccessfulHeader": "Thank you for signing up!",
+  "subscribeSuccessfulEmailBody": "Check your email for all of your newsletter details. "
 }
