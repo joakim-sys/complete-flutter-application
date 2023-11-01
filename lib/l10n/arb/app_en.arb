@@ -47,5 +47,11 @@
   "newsBlockPremiumText": "Premium",
   "subscribeErrorMessage": "Problem ocurred when subscribing to the newsletter",
   "subscribeSuccessfulHeader": "Thank you for signing up!",
-  "subscribeSuccessfulEmailBody": "Check your email for all of your newsletter details. "
+  "subscribeSuccessfulEmailBody": "Check your email for all of your newsletter details. ",
+  "subscribeEmailHeader": "Get our latest news and insights, plus special offers!",
+  "subscribeEmailHint": "Email address",
+  "subscribeEmailBody": "Sign up for our newsletter and stay in the know. We'll send you exclusive news, insights, and promotions.",
+  "subscribeEmailButtonText": "Subscribe now!",
+  "adLoadFailure": "Failed to load this ad.",
+  "shareText": "Share"
 }

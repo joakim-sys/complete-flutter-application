@@ -13,6 +13,5 @@ List<Page<dynamic>> onGenerateAppViewPages(
     case AppStatus.unauthenticated:
     case AppStatus.authenticated:
       return [HomePage.page()];
-      // return [OnboardingPage.page()];
   }
 }

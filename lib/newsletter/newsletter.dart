@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pro_one/analytics/analytics_bloc.dart';
 import 'package:pro_one/gen/assets.gen.dart';
 import 'package:pro_one/l10n/l10n.dart';
+import 'package:pro_one/newsblocks_ui/newsletter_signup.dart';
 import 'package:pro_one/newsletter/newsletter_bloc.dart' hide NewsletterEvent;
-import 'package:pro_one/newsletter/newsletter_succeeded.dart';
+import 'package:pro_one/newsblocks_ui/newsletter_succeeded.dart';
+import 'package:pro_one/packages/app_ui/app_email_text_field.dart';
 import 'package:pro_one/packages/app_ui/app_spacing.dart';
 import 'package:pro_one/packages/news_repository.dart';
 import 'package:pro_one/packages/ntg_event.dart';
@@ -64,7 +66,7 @@ class _NewsletterViewState extends State<NewsletterView> {
           }
         },
         builder: (context, state) {
-            if (state.status == NewsletterStatus.success) {
+          if (state.status == NewsletterStatus.success) {
             return NewsletterSucceeded(
               headerText: context.l10n!.subscribeSuccessfulHeader,
               content: SizedBox(
@@ -75,6 +77,21 @@ class _NewsletterViewState extends State<NewsletterView> {
               footerText: context.l10n!.subscribeSuccessfulEmailBody,
             );
           }
+          return NewsletterSignUp(
+              headerText: context.l10n!.subscribeEmailHeader,
+              bodyText: context.l10n!.subscribeEmailBody,
+              email: AppEmailTextField(
+                hintText: context.l10n!.subscribeEmailHint,
+                onChanged: (email) => context
+                    .read<NewsletterBloc>()
+                    .add(EmailChanged(email: email)),
+              ),
+              buttonText: context.l10n!.subscribeEmailButtonText,
+              onPressed: isEmailValid
+                  ? () => context
+                      .read<NewsletterBloc>()
+                      .add(const NewsletterSubscribed())
+                  : null);
         },
       ),
     );

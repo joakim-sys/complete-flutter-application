@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pro_one/newsletter/newsletter_container.dart';
+import 'package:pro_one/newsblocks_ui/newsletter_container.dart';
 import 'package:pro_one/packages/app_ui/app_spacing.dart';
 
 import '../packages/app_ui/app_colors.dart';

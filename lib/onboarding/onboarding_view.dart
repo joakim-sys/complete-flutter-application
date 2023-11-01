@@ -5,6 +5,9 @@ import 'package:pro_one/l10n/l10n.dart';
 import 'package:pro_one/onboarding/onboarding_bloc.dart';
 import 'package:pro_one/onboarding/onboarding_view_item.dart';
 import 'package:pro_one/packages/app_ui/app_button.dart';
+import 'package:pro_one/packages/app_ui/app_colors.dart';
+
+import '../packages/app_ui/app_spacing.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
@@ -110,12 +113,12 @@ class _OnboardingTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Padding(
-      padding: const EdgeInsets.only(top: 16 * 4 + 0.5 * 4, bottom: 16 * 0.125),
+      padding: const EdgeInsets.only(
+          top: AppSpacing.xxxlg + AppSpacing.sm, bottom: AppSpacing.xxs),
       child: Text(
         context.l10n!.onboardingWelcomeTitle,
-        // 'Welcome to\nAlgorithm Alley',
         textAlign: TextAlign.center,
-        style: theme.textTheme.displayLarge?.apply(color: Color(0xFFFFFFFF)),
+        style: theme.textTheme.displayLarge?.apply(color: AppColors.white),
       ),
     );
   }
@@ -128,10 +131,10 @@ class _OnboardingSubtitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Padding(
-      padding: EdgeInsets.only(top: 16 * 1.5),
+      padding: const EdgeInsets.only(top: AppSpacing.xlg),
       child: Text(
         context.l10n!.onboardingSubtitle,
-        style: theme.textTheme.titleMedium?.apply(color: Color(0xFFFFFFFF)),
+        style: theme.textTheme.titleMedium?.apply(color: AppColors.white),
         textAlign: TextAlign.center,
       ),
     );

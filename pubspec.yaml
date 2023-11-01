@@ -49,6 +49,7 @@ dependencies:
   android_intent_plus: ^4.0.3
   cached_network_image: ^3.3.0
   visibility_detector: ^0.4.0+2
+  share_plus: ^7.2.1
 
 dev_dependencies:
   flutter_test:

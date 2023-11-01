@@ -3,6 +3,7 @@ import 'package:flutter/material.dart' hide Spacer;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pro_one/app/app_bloc.dart';
 import 'package:pro_one/l10n/l10n.dart';
+import 'package:pro_one/newsblocks_ui/banner_ad.dart';
 import 'package:pro_one/newsblocks_ui/divider_horizontal.dart';
 import 'package:pro_one/newsblocks_ui/post_grid.dart';
 import 'package:pro_one/newsblocks_ui/post_large.dart';
@@ -12,6 +13,8 @@ import 'package:pro_one/newsblocks_ui/section_header.dart';
 import 'package:pro_one/newsblocks_ui/spacer.dart';
 import 'package:news_blocks/news_blocks.dart';
 import 'package:pro_one/newsletter/newsletter.dart';
+
+import '../article/article_page.dart';
 
 class CategoryFeedItem extends StatelessWidget {
   const CategoryFeedItem({super.key, required this.block});
@@ -53,11 +56,18 @@ class CategoryFeedItem extends StatelessWidget {
           onPressed: (action) => _onFeedItemAction(context, action));
     } else if (newsBlock is NewsletterBlock) {
       return const Newsletter();
+    } else if (newsBlock is BannerAdBlock) {
+      return BannerAd(
+          block: newsBlock, adFailedToLoadTitle: context.l10n!.adLoadFailure);
+    } else {
+      return const SizedBox();
     }
-    return const Text('Newsblock here');
   }
 }
 
 Future<void> _onFeedItemAction(BuildContext context, BlockAction action) async {
-  // TODO: Add functionality
+  if (action is NavigateToArticleAction) {
+    await Navigator.of(context)
+        .push<void>(ArticlePage.route(id: action.articleId));
+  }
 }
