@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pro_one/app/app_bloc.dart';
 import 'package:pro_one/article/article_bloc.dart';
+import 'package:pro_one/article/article_content.dart';
 import 'package:pro_one/article/article_theme_override.dart';
 import 'package:pro_one/l10n/l10n.dart';
 import 'package:pro_one/packages/app_ui/app_back_button.dart';
@@ -114,7 +115,7 @@ class ArticleView extends StatelessWidget {
                 ),
                 body: ArticleThemeOverride(
                   isVideoArticle: isVideoArticle,
-                  child: Placeholder(),
+                  child: const ArticleContent(),
                 ),
               ),
             ),

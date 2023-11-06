@@ -4,9 +4,11 @@ import 'package:pro_one/app/app_bloc.dart';
 import 'package:pro_one/feed/feed_view.dart';
 import 'package:pro_one/home/home_cubit.dart';
 import 'package:pro_one/login/login_modal.dart';
+import 'package:pro_one/navigation/bottom_nav_bar.dart';
 import 'package:pro_one/navigation/nav_drawer_subscribe.dart';
 import 'package:pro_one/packages/app_ui/app_logo.dart';
 import 'package:pro_one/packages/app_ui/show_app_modal.dart';
+import 'package:pro_one/search/search_page.dart';
 import 'package:pro_one/user_profile/user_profile_button.dart';
 
 class HomeView extends StatelessWidget {
@@ -39,8 +41,11 @@ class HomeView extends StatelessWidget {
         drawer: const NavDrawer(),
         body: IndexedStack(
           index: selectedTab,
-          children: const [FeedView()],
+          children: const [FeedView(), SearchPage()],
         ),
+        bottomNavigationBar: BottomNavBar(
+            currentIndex: selectedTab,
+            onTap: (value) => context.read<HomeCubit>().setTab(value)),
       ),
     );
   }

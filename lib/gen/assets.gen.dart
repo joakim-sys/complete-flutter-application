@@ -20,6 +20,22 @@ class $AssetsIconsGen {
   /// File path: assets/icons/apple.svg
   SvgGenImage get apple => const SvgGenImage('assets/icons/apple.svg');
 
+  /// File path: assets/icons/arrow_left_disable.svg
+  SvgGenImage get arrowLeftDisable =>
+      const SvgGenImage('assets/icons/arrow_left_disable.svg');
+
+  /// File path: assets/icons/arrow_left_enable.svg
+  SvgGenImage get arrowLeftEnable =>
+      const SvgGenImage('assets/icons/arrow_left_enable.svg');
+
+  /// File path: assets/icons/arrow_right_disable.svg
+  SvgGenImage get arrowRightDisable =>
+      const SvgGenImage('assets/icons/arrow_right_disable.svg');
+
+  /// File path: assets/icons/arrow_right_enable.svg
+  SvgGenImage get arrowRightEnable =>
+      const SvgGenImage('assets/icons/arrow_right_enable.svg');
+
   /// File path: assets/icons/back_icon.svg
   SvgGenImage get backIcon => const SvgGenImage('assets/icons/back_icon.svg');
 
@@ -60,6 +76,9 @@ class $AssetsIconsGen {
   SvgGenImage get notificationsIcon =>
       const SvgGenImage('assets/icons/notifications_icon.svg');
 
+  /// File path: assets/icons/play_icon.svg
+  SvgGenImage get playIcon => const SvgGenImage('assets/icons/play_icon.svg');
+
   /// File path: assets/icons/profile_icon.svg
   SvgGenImage get profileIcon =>
       const SvgGenImage('assets/icons/profile_icon.svg');
@@ -78,6 +97,10 @@ class $AssetsIconsGen {
   List<SvgGenImage> get values => [
         aboutIcon,
         apple,
+        arrowLeftDisable,
+        arrowLeftEnable,
+        arrowRightDisable,
+        arrowRightEnable,
         backIcon,
         bestValue,
         closeCircle,
@@ -89,6 +112,7 @@ class $AssetsIconsGen {
         logInIcon,
         logOutIcon,
         notificationsIcon,
+        playIcon,
         profileIcon,
         termsOfUseIcon,
         twitter,

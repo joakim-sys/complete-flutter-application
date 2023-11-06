@@ -6,6 +6,7 @@ import 'package:pro_one/l10n/l10n.dart';
 import 'package:pro_one/login/login_modal.dart';
 import 'package:pro_one/packages/app_ui/app_spacing.dart';
 import 'package:pro_one/packages/app_ui/show_app_modal.dart';
+import 'package:pro_one/user_profile/user_profile_page.dart';
 
 class UserProfileButton extends StatelessWidget {
   const UserProfileButton({super.key});
@@ -15,7 +16,8 @@ class UserProfileButton extends StatelessWidget {
     final isAnonymous =
         context.select<AppBloc, bool>((bloc) => bloc.state.user.isAnonymous);
 
-    return isAnonymous ? const LoginButton() : const OpenProfileButton();
+    // return isAnonymous ? const LoginButton() : const OpenProfileButton();
+    return const OpenProfileButton();
   }
 }
 
@@ -44,8 +46,7 @@ class OpenProfileButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      // TODO: ADD ACTION HERE
-      onPressed: null,
+      onPressed: () => Navigator.of(context).push(UserProfilePage.route()),
       icon: Assets.icons.profileIcon.svg(),
       iconSize: 24,
       padding: const EdgeInsets.symmetric(

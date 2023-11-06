@@ -58,7 +58,7 @@ class TrcApiClient {
     required TokenProvider tokenProvider,
     http.Client? httpClient,
   }) : this._(
-          baseUrl: 'http://169.254.238.238:8080',
+          baseUrl: 'http://10.103.5.136:8080',
           httpClient: httpClient,
           tokenProvider: tokenProvider,
         );

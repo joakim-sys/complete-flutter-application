@@ -50,6 +50,9 @@ dependencies:
   cached_network_image: ^3.3.0
   visibility_detector: ^0.4.0+2
   share_plus: ^7.2.1
+  video_player: ^2.7.2
+  flutter_html: ^3.0.0-beta.2
+  stream_transform: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +63,7 @@ dev_dependencies:
   version_gen: ^1.0.1
   flutter_gen_runner: ^5.3.2
   json_serializable: ^6.7.1
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
@@ -98,3 +102,9 @@ flutter_gen:
 
   integrations:
     flutter_svg: true
+
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/aa.png"
