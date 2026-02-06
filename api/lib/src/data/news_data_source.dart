@@ -90,4 +90,13 @@ abstract class NewsDataSource {
   /// Returns the user associated with the provided [userId].
   /// Returns `null` if there is no user with the provided [userId].
   Future<User?> getUser({required String userId});
+
+  /// Generates a new news item and stores it in memory.
+  ///
+  /// [category] defaults to [Category.top] when not provided.
+  /// [prompt] can be used to seed the generated content.
+  Future<NewsItem> generateNews({
+    Category category = Category.top,
+    String? prompt,
+  });
 }
