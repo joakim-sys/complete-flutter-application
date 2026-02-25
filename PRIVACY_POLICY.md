@@ -2,34 +2,23 @@
 
 **Effective Date:** February 25, 2026
 
-This application (“App”) is provided by [Your Company/Developer Name].  
-We respect your privacy and are committed to protecting your personal information.
+This application is provided as a base template for building Flutter apps. It is intended primarily as a starting point for development and testing.
 
-## Information We Collect
-- Basic usage data (such as device type, operating system, and app interactions).
-- Information required by third‑party services integrated into the App (e.g., Firebase, Google Mobile Ads, Facebook Login, Twitter Login).
+## Information Collection
+The app itself does not collect or store personal information beyond what is required by integrated third‑party services such as Firebase, Google Analytics, or authentication providers. These services may collect anonymous usage data or identifiers necessary to provide their functionality.
 
-## How We Use Information
-- To provide and improve the App’s functionality.
-- To deliver personalized content and advertisements.
-- To enable authentication and login via third‑party providers.
+## Use of Information
+Any information collected by third‑party services is used solely to enable core features such as analytics, notifications, and authentication. The app does not process or share this information independently.
 
 ## Sharing of Information
-- We do not sell or share your personal information with third parties except:
-  - As required by law.
-  - To enable third‑party SDKs (Firebase, AdMob, Facebook, Twitter) that you choose to use within the App.
+No personal information is sold or shared by the app. Data may be shared only with third‑party services that are integrated into the template (for example, Firebase or authentication providers) in order to provide their respective features.
 
 ## Data Retention
-- We retain information only as long as necessary to provide the App’s services.
-- You may request deletion of your data by contacting us.
+Data retention is managed by the third‑party services integrated into the app. The template itself does not store or retain user data.
 
 ## Security
-We take reasonable measures to protect your information, but no method of transmission over the internet is 100% secure.
+Reasonable measures are taken by third‑party providers to protect information. As this is a base template, no additional data security mechanisms are implemented beyond those provided by the integrated services.
 
-## Your Choices
-- You may disable ads personalization in your device settings.
-- You may revoke permissions for Facebook or Twitter login at any time via their respective account settings.
-
-## Contact Us
-If you have questions about this Privacy Policy, please contact us at:  
-**your‑email@example.com**
+## Contact
+If you have questions about this Privacy Policy, please contact the developer at:  
+**your-email@example.com**
