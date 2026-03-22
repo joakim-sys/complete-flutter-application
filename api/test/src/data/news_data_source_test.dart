@@ -79,6 +79,14 @@ class MyNewsDataSource extends NewsDataSource {
   Future<User?> getUser({required String userId}) {
     throw UnimplementedError();
   }
+
+  @override
+  Future<NewsItem> generateNews({
+    Category category = Category.top,
+    String? prompt,
+  }) {
+    throw UnimplementedError();
+  }
 }
 
 void main() {
@@ -293,6 +301,22 @@ void main() {
       });
     });
 
+    group('generateNews', () {
+      test('stores generated content and surfaces it in feeds', () async {
+        final generated = await newsDataSource.generateNews(
+          category: Category.technology,
+          prompt: 'AI update',
+        );
+
+        final feed = await newsDataSource.getFeed(
+          category: Category.technology,
+          limit: 1,
+        );
+
+        expect(feed.blocks.first, equals(generated.post));
+      });
+    });
+
     group('getCategories', () {
       test('returns stubbed categories', () {
         expect(
@@ -326,6 +350,23 @@ void main() {
             articleHaving(
               blocks: item.content,
               totalBlocks: item.content.length,
+            ),
+          ),
+        );
+      });
+
+      test('returns content when article is generated', () async {
+        final generated = await newsDataSource.generateNews(
+          category: Category.top,
+          prompt: 'Daily roundup',
+        );
+
+        expect(
+          newsDataSource.getArticle(id: generated.post.id),
+          completion(
+            articleHaving(
+              blocks: generated.content,
+              totalBlocks: generated.content.length,
             ),
           ),
         );

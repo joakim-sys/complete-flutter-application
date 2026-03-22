@@ -134,6 +134,30 @@ This action allows you to query feeds.
         + feed (required, array[Block]) - The list of blocks that composes the feed.
         + total_count (optional, number) - The total number of available blocks.
 
+## AI News Generation [/api/v1/news/generate]
+
+Generate and store AI-authored news content in the in-memory data source.
+
+### Generate News [POST]
+
+This action generates a new news item and stores it in memory.
+
++ Request (application/json)
+
+        {
+            "category": "technology",
+            "prompt": "AI update"
+        }
+
++ Response 201 (application/json)
+
+        {
+            "id": "generated-id",
+            "title": "AI update: New tools redefine daily workflows",
+            "category": "technology",
+            "url": "https://example.com/news/generated-id"
+        }
+
     + Body
         
             {
